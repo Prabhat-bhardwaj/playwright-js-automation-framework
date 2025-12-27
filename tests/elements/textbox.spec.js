@@ -1,12 +1,18 @@
 const {test, expect} = require('@playwright/test')
 const { TextBoxPage } = require('../../pages/elements/TextBoxPage')
+const textBoxData = require('../../test-data/textbox.json')
 
 test("Text Box form submission", async ({page}) => {
     const textBoxPage = new TextBoxPage(page)
 
     await page.goto("https://demoqa.com")
     await textBoxPage.openTextBox()
-    await textBoxPage.fillTextBoxForm("Prabhat", "test@gmail.com", "New Delhi", "Delhi Permanent")
+    await textBoxPage.fillTextBoxForm(
+        textBoxData.validUser.fullName,
+        textBoxData.validUser.email,
+        textBoxData.validUser.CurrentAddrress,
+        textBoxData.validUser.permanentAddress
+    )
 
     //No need to use directly in test class
     // await expect(page.locator('#output')).toContainText('Prabhat');
@@ -22,7 +28,7 @@ test("Text Box form submission", async ({page}) => {
 
     //Assertions
     await expect(textBoxPage.getOutputBox()).toBeVisible()
-    await expect(textBoxPage.getOutputName()).toHaveText('Name:Prabhat')
-    await expect(textBoxPage.getOutputEmail()).toHaveText('Email:test@gmail.com')
+    await expect(textBoxPage.getOutputName()).toHaveText('Name:Prabhat Bhardwaj')
+    await expect(textBoxPage.getOutputEmail()).toHaveText('Email:prabhat@gmail.com')
 
 })
