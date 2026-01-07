@@ -194,5 +194,3 @@ Senior QA / Automation Engineer
 * LinkedIn: [https://www.linkedin.com/in/qa-prabhat-bhardwaj](https://www.linkedin.com/in/qa-prabhat-bhardwaj)
 
 ---
-
-**This framework demonstrates a real-world Playwright automation architecture suitable for enterprise projects and technical interviews.**
