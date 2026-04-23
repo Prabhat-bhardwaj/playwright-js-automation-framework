@@ -12,7 +12,6 @@ class WebTablePage {
         this.salaryInput = "#salary";
         this.departmentInput = "#department";
         this.submitButton = "#submit";
-
         this.verifyNewEntry = "//div[text()='Prabhat']";
         
     }

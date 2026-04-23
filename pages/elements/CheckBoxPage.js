@@ -4,10 +4,10 @@ class CheckBoxPage extends BasePage {
     constructor(page){
         super(page)
         this.checkBox = "//span[text()='Check Box']"
-        this.toggle1 = "//button[@title='Toggle']"
-        this.docToggle = "(//button[contains(@class,'rct-collapse-btn')])[3]"
-        this.offToggle = "(//button[contains(@class, 'rct-collapse-btn')])[5]"
-        this.private = "//span[text()='Private']"
+        this.toggle1 = "//span[@class='rc-tree-switcher rc-tree-switcher_close']"
+        this.docToggle = "(//span[@class='rc-tree-switcher rc-tree-switcher_close'])[2]"
+        this.offToggle = "(//span[@class='rc-tree-switcher rc-tree-switcher_close'])[3]"
+        this.private = "//span[@aria-label='Select Private']"
 
         this.verifyOutput = "#result"
         this.verifyFolder = "//span[@class='text-success']"
