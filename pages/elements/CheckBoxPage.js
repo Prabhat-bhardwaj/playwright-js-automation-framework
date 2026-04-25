@@ -3,6 +3,7 @@ const BasePage = require('../../pages/base/BasePage')
 class CheckBoxPage extends BasePage {
     constructor(page){
         super(page)
+        this.element = "//h5[text()='Elements']"
         this.checkBox = "//span[text()='Check Box']"
         this.toggle1 = "//span[@class='rc-tree-switcher rc-tree-switcher_close']"
         this.docToggle = "(//span[@class='rc-tree-switcher rc-tree-switcher_close'])[2]"
@@ -14,7 +15,7 @@ class CheckBoxPage extends BasePage {
     }
 
     async openCheckBox(){
-        await this.openElementsSection()
+        await this.click(this.element)
         await this.click(this.checkBox)
     }
 
